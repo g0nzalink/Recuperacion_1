@@ -13,9 +13,9 @@ public class InventoryService {
 
     @PostConstruct
     public void init() {
-        products.add(new Product("P001", "Laptop", 1));
-        products.add(new Product("P002", "Mouse", 2));
-        products.add(new Product("P003", "Funda", 1));
+        products.add(new Product("P001", "Laptop", 98));
+        products.add(new Product("P002", "Mouse", 45));
+        products.add(new Product("P003", "Funda", 74));
     }
 
     public List<Product> getProducts() {
