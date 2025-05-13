@@ -8,5 +8,5 @@ import java.util.List;
 public class Order {
 	private String id;
 	private String email;
-	private List<String> products;
+	private List<Product> products;
 }
