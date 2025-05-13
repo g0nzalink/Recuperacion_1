@@ -21,7 +21,6 @@ public class InventoryUpdateListener {
 	public void handleOrderCreated(OrderCreatedEvent event) {
 		logger.info("Reduciendo stock para productos del pedido: " + event.getOrder().getProducts());
 
-		// Muestra el stock restante
 		logger.info("Stock actual después del pedido:");
 		inventoryService.getProducts().forEach(product ->
 				logger.info(product.getProductId() + " - " + product.getName() + ": " + product.getQuantity())

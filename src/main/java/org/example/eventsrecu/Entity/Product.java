@@ -1,13 +1,17 @@
 package org.example.eventsrecu.Entity;
 
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
 public class Product {
+    @Id
     private String productId;
+
     private String name;
     private int quantity;
 
@@ -15,5 +19,9 @@ public class Product {
         this.productId = productId;
         this.name = name;
         this.quantity = quantity;
+    }
+
+    public Product() {
+
     }
 }

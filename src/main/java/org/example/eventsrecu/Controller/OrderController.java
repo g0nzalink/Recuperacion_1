@@ -24,8 +24,7 @@ public class OrderController {
 	@PostMapping
 	public String createOrder(@RequestBody Order order) {
 		eventPublisher.publishEvent(new OrderCreatedEvent(this, order));
-		// Reducir stock directamente también aquí si quieres (opcional)
-		for (Product product : order.getProducts()) {
+		for (var product : order.getProducts()) {
 			inventoryService.reduceStock(product.getProductId(), product.getQuantity());
 		}
 		return "Pedido recibido: " + order.getId();
